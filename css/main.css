@@ -2,6 +2,7 @@
 /* Baseline reset */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans");
 body {
+  margin: 0;
   background-color: #feffff;
   color: rgba(0, 0, 0, 0.78);
   font-family: 'Open Sans', sans-serif; }
@@ -30,7 +31,8 @@ main {
 .picOfMe {
   height: 420px;
   width: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  border-right: solid white 1rem; }
 
 iframe {
   width: 100%;
@@ -55,18 +57,17 @@ form {
 /*CONTACT PAGE DESKTOP*/
 @media screen and (min-width: 720px) {
   .picOfMe {
-    height: 420px;
     width: 20%; }
   .contactMain {
     display: flex;
     justify-content: center; }
   iframe {
-    width: 600px;
+    width: 500px;
     height: 190px; }
   .contact {
     display: flex;
     flex-direction: column;
-    width: 600px; }
+    width: 500px; }
   main {
     margin: 5% 0; } }
 
@@ -83,9 +84,19 @@ but could not get it to work. */
   justify-content: center; }
 
 .column {
-  flex: 33%;
-  width: 33%;
+  flex: 30%;
+  width: 30%;
   padding: 0 4px; }
+  .column .karol {
+    width: calc(200% + 8px); }
+  .column .italy {
+    width: calc(200% + 8px); }
+  .column .paulina {
+    height: 1008px; }
+  .column div {
+    width: auto;
+    height: 500px;
+    margin-top: 8px; }
   .column img {
     margin-top: 8px;
     vertical-align: middle;
@@ -93,7 +104,32 @@ but could not get it to work. */
     height: 500px;
     object-fit: cover; }
 
-@media screen and (max-width: 600px) {
+.lastSmall {
+  position: fixed;
+  visibility: hidden; }
+
+@media screen and (max-width: 1200px) {
+  .lastSmall {
+    position: static;
+    visibility: visible; }
+  .lastLarge {
+    position: fixed;
+    visibility: hidden; }
+  .column {
+    flex: 48%;
+    max-width: 48%; }
+    .column .karol {
+      width: 100%; }
+    .column .italy {
+      width: 100%; }
+    .column .paulina {
+      height: 500px; }
+    .column div {
+      width: auto;
+      height: auto;
+      margin-top: 0; } }
+
+@media screen and (max-width: 700px) {
   .column {
     flex: 100%;
     max-width: 100%; } }
@@ -167,7 +203,7 @@ footer {
   footer .icons {
     height: 40px;
     width: 150px;
-    background-color: #f0f0f0;
+    background-color: white;
     margin-bottom: 2rem; }
 
 /* This is for the homepage */
@@ -181,7 +217,7 @@ footer {
   background-size: cover;
   position: relative; }
   .main-photo .inner-text {
-    background-color: rgba(255, 255, 255, 0.322);
+    background-color: rgba(255, 255, 255, 0.199);
     text-align: center;
     height: auto;
     padding: 1rem;
@@ -235,7 +271,7 @@ footer {
   position: relative; }
 
 .about-text {
-  background-color: rgba(255, 255, 255, 0.322);
+  background-color: rgba(255, 255, 255, 0.444);
   text-align: left;
   padding: 2rem;
   margin: 0 0 0 auto; }
@@ -253,7 +289,7 @@ footer {
 /* Desktop View */
 @media screen and (min-width: 720px) {
   .main-photo {
-    height: 70%; }
+    height: 45rem; }
     .main-photo .inner-text {
       border: solid 2px white;
       width: 630px;
@@ -278,8 +314,12 @@ footer {
     .quotes .person {
       width: 30%;
       margin: 1rem auto; }
+      .quotes .person img {
+        border: solid 2px white; }
       .quotes .person h2 {
         padding: 1rem; }
+  .about-photo {
+    height: 70%; }
   .about-text {
     width: 60%;
     height: 700px;

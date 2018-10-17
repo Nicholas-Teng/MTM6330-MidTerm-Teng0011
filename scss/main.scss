@@ -109,7 +109,7 @@ footer {
   .icons {
     height: 40px;
     width: 150px;
-    background-color: $background;
+    background-color: white;
     margin-bottom: 2rem;
   }
 }
@@ -126,7 +126,7 @@ footer {
   position: relative;
 
   .inner-text {
-    background-color: rgba(255, 255, 255, 0.322);
+    background-color: rgba(255, 255, 255, 0.199);
     text-align: center;
     height: auto;
     padding: 1rem;
@@ -199,7 +199,7 @@ footer {
 }
 
 .about-text {
-  background-color: rgba(255, 255, 255, 0.322);
+  background-color: rgba(255, 255, 255, 0.444);
   text-align: left;
   padding: 2rem;
   margin: 0 0 0 auto;
@@ -226,7 +226,7 @@ footer {
 
   //Homepage
   .main-photo {
-    height: 70%;
+    height: 45rem;
 
     .inner-text {
       border: solid 2px white;
@@ -263,6 +263,10 @@ footer {
       width: 30%;
       margin: 1rem auto;
 
+      img {
+        border: solid 2px white;
+      }
+
       h2 {
         padding: 1rem;
       }
@@ -270,6 +274,10 @@ footer {
   }
 
   //About Page
+  .about-photo {
+    height: 70%;
+  }
+
   .about-text {
     width: 60%;
     height: 700px;

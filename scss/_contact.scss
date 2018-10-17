@@ -14,6 +14,7 @@ main {
   height: 420px;
   width: 100%;
   object-fit: cover;
+  border-right: solid white 1rem;
 }
 
 iframe {
@@ -44,7 +45,6 @@ form {
 @media screen and (min-width: 720px) {
 
   .picOfMe {
-    height: 420px;
     width: 20%;
   }
 
@@ -54,14 +54,14 @@ form {
   }
 
   iframe {
-    width: 600px;
+    width: 500px;
     height: 190px;
   }
 
   .contact {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 500px;
   }
 
   main {

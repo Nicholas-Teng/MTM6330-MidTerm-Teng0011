@@ -15,9 +15,27 @@ but could not get it to work. */
 }
 
 .column {
-  flex: 33%;
-  width: 33%;
+  flex: 30%;
+  width: 30%;
   padding: 0 4px;
+
+  .karol {
+    width: calc(200% + 8px);
+  }
+
+  .italy {
+    width: calc(200% + 8px);
+  }
+
+  .paulina {
+    height: 1008px;
+  }
+
+  div {
+    width: auto;
+    height: 500px;
+    margin-top: 8px;
+  }
 
   img {
     margin-top: 8px;
@@ -28,7 +46,47 @@ but could not get it to work. */
   }
 }
 
-@media screen and (max-width: 600px) {
+.lastSmall {
+  position: fixed;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .lastSmall {
+    position: static;
+    visibility: visible;
+  }
+
+  .lastLarge {
+    position: fixed;
+    visibility: hidden;
+  }
+
+  .column {
+    flex: 48%;
+    max-width: 48%;
+
+    .karol {
+      width: 100%;
+    }
+
+    .italy {
+      width: 100%;
+    }
+
+    .paulina {
+      height: 500px;
+    }
+
+    div {
+      width: auto;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
   .column {
     flex: 100%;
     max-width: 100%;
