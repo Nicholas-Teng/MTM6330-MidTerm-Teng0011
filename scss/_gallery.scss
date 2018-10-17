@@ -1,0 +1,36 @@
+/* I spent too many hours trying to 
+get css grids to work. I learned enough to create
+a basic grid-template-column and row but could
+not figure out how to make it responsive.
+I tried using grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+but could not get it to work. */
+
+// I used w3schools to help with this flexbox gallery
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.column {
+  flex: 33%;
+  width: 33%;
+  padding: 0 4px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

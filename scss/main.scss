@@ -1,0 +1,288 @@
+/* Baseline reset */
+@import 'base';
+
+/* Page Style Imports */
+@import 'contact';
+@import 'gallery';
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans');
+
+/* Clear Fix */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Global Variable Scope*/
+$main-color1: #321749;
+$main-color2: #937fa4;
+$sub-color1: #2fb999;
+$background: rgb(240, 240, 240);
+$mainFont: 'Open Sans',
+sans-serif;
+$subFont: 'Comfortaa',
+sans-serif;
+
+/* Add styles here */
+/* This is for the nav bar */
+.navbar {
+  .logo {
+    flex-grow: 3;
+    height: 100%;
+    padding: 10px;
+
+    img {
+      height: 95%;
+      padding-top: 2px;
+      width: auto;
+    }
+  }
+
+  $height: 50px;
+  align-items: center;
+  border-bottom: 2px solid $background;
+  background-color: $background;
+  display: flex;
+  height: $height;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  .nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    a {
+      text-decoration: none;
+      font-family: $mainFont;
+      color: $main-color1;
+    }
+  }
+
+  .menu-item {
+    border-bottom: 2px solid transparent;
+    flex-grow: 1;
+    letter-spacing: 0.5px;
+    height: $height;
+    line-height: $height;
+    text-align: center;
+
+    &:hover {
+      background-color: hsl(0, 0%, 94%);
+      cursor: pointer;
+    }
+
+    &.active {
+      border-color: lighten(desaturate($main-color1, 30%), 20%);
+    }
+  }
+}
+
+/* This is for the footer */
+footer * {
+  margin: 0;
+  height: 100%;
+}
+
+footer {
+  padding-top: 3rem;
+  height: 20px;
+
+  h5 {
+    height: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    border-bottom: solid black 3px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .icons {
+    height: 40px;
+    width: 150px;
+    background-color: $background;
+    margin-bottom: 2rem;
+  }
+}
+
+/* This is for the homepage */
+/* Hero Banner */
+.main-photo {
+  background-image: url(mainHeader.jpg);
+  background-color: $main-color1;
+  height: 28rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .inner-text {
+    background-color: rgba(255, 255, 255, 0.322);
+    text-align: center;
+    height: auto;
+    padding: 1rem;
+    position: relative;
+    transform: translate(0%, 50%);
+
+    h1 {
+      color: white;
+      font-size: 4em;
+    }
+
+    h2 {
+      color: white;
+      font-size: 1em;
+      margin: 20px 0;
+    }
+  }
+}
+
+/* Welcome */
+.about-section-main {
+  margin: 1rem;
+  height: auto;
+  text-align: center;
+
+  p {
+    height: auto;
+    margin: 1rem;
+  }
+}
+
+.quotes {
+  height: auto;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.888);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 10%;
+  margin: auto;
+  color: white;
+
+  .person {
+    width: 90%;
+    padding: 0 0 5rem;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 0.5rem;
+      color: white;
+    }
+  }
+}
+
+// ABOUT PAGE
+
+.about-photo {
+  background-image: url(about.jpg);
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about-text {
+  background-color: rgba(255, 255, 255, 0.322);
+  text-align: left;
+  padding: 2rem;
+  margin: 0 0 0 auto;
+
+  h1 {
+    font-size: 3em;
+    color: $main-color1;
+
+    .highlight {
+      text-decoration: none;
+      color: $main-color2;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 1em;
+    line-height: 40px;
+  }
+}
+
+/* Desktop View */
+@media screen and (min-width: 720px) {
+
+  //Homepage
+  .main-photo {
+    height: 70%;
+
+    .inner-text {
+      border: solid 2px white;
+      width: 630px;
+      position: absolute;
+      margin: 150px auto 0;
+      padding: 2rem;
+      right: 0;
+      left: 0;
+      transform: none;
+
+      h1 {
+        font-size: 7em;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin: 20px;
+      }
+    }
+  }
+
+  /* Welcome */
+  .about-section-main {
+    margin: 3rem;
+  }
+
+  .quotes {
+    width: 90%;
+    flex-direction: row;
+    padding: 2rem 5%;
+
+    .person {
+      width: 30%;
+      margin: 1rem auto;
+
+      h2 {
+        padding: 1rem;
+      }
+    }
+  }
+
+  //About Page
+  .about-text {
+    width: 60%;
+    height: 700px;
+    border-left: solid 2px white;
+
+    h1 {
+      font-size: 5em;
+    }
+
+    h2 {
+      width: 60%;
+      font-size: 1.3em;
+      line-height: 45px;
+    }
+  }
+}
